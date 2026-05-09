@@ -75,6 +75,9 @@ export default function App() {
 
         {/* Hero Section */}
         <section className="hero-section reveal-on-scroll">
+          {/* Animated Square Matrix Background */}
+          <div className="hero-matrix-bg"></div>
+
           <div className="hero-inner">
             <div className="hero-badge-pill">
               <span className="orange-dot"></span>
