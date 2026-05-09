@@ -72,53 +72,55 @@ export default function App() {
 
       <main className="main-content">
 
-        {/* Hero Section */}
-        <section className="hero-section reveal-on-scroll">
-          <div className="hero-badge-pill">
-            <span className="premium-dot"></span>
-            AI RESEARCH SCHOLAR · ASSISTANT PROFESSOR
-          </div>
-
-          <h1 className="hero-title">
-            Mohammad<br />Shakeel
-          </h1>
-
-          <p className="hero-subtitle">
-            Dedicated to advancing computer science education and pioneering research in <strong>Intelligent Transportation Systems.</strong> Currently pursuing my <span className="premium-highlight">Ph.D. at SR University</span>, backing a decade of academic experience with cutting-edge AI research.
-          </p>
-
-          <div className="hero-actions reveal-on-scroll delay-1">
-            <div className="hero-buttons-group">
-              <a href="#contact" className="btn-primary">
-                Contact Me <FaArrowRight size={12} />
-              </a>
-              <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-outline">
-                <FaLinkedin size={14} /> LinkedIn
-              </a>
-              <a href="https://scholar.google.com/citations?user=g1MdrbIAAAAJ&hl=en" target="_blank" rel="noreferrer" className="btn-outline">
-                <FaBookOpen size={14} /> Publications
-              </a>
-              <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-outline">
-                <MdOpenInNew size={14} /> ORCID
-              </a>
+        {/* Hero Section - Premium Card Style */}
+        <div className="hero-wrapper">
+          <section className="hero-section reveal-on-scroll">
+            <div className="hero-badge-pill">
+              <span className="premium-dot"></span>
+              AI RESEARCH SCHOLAR · ASSISTANT PROFESSOR
             </div>
-          </div>
 
-          <div className="hero-stats">
-            <div className="stat-box reveal-on-scroll delay-1">
-              <h3>10+</h3>
-              <p>YEARS TEACHING</p>
+            <h1 className="hero-title">
+              Mohammad<br />Shakeel
+            </h1>
+
+            <p className="hero-subtitle">
+              Dedicated to advancing computer science education and pioneering research in <strong>Intelligent Transportation Systems.</strong> Currently pursuing my <span className="premium-highlight">Ph.D. at SR University</span>, backing a decade of academic experience with cutting-edge AI research.
+            </p>
+
+            <div className="hero-actions reveal-on-scroll delay-1">
+              <div className="hero-buttons-group">
+                <a href="#contact" className="btn-primary">
+                  Contact Me <FaArrowRight size={12} />
+                </a>
+                <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-outline">
+                  <FaLinkedin size={14} /> LinkedIn
+                </a>
+                <a href="https://scholar.google.com/citations?user=g1MdrbIAAAAJ&hl=en" target="_blank" rel="noreferrer" className="btn-outline">
+                  <FaBookOpen size={14} /> Publications
+                </a>
+                <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-outline">
+                  <MdOpenInNew size={14} /> ORCID
+                </a>
+              </div>
             </div>
-            <div className="stat-box reveal-on-scroll delay-2">
-              <h3>Ph.D.</h3>
-              <p>IN PROGRESS</p>
+
+            <div className="hero-stats">
+              <div className="stat-box reveal-on-scroll delay-1">
+                <h3>10+</h3>
+                <p>YEARS TEACHING</p>
+              </div>
+              <div className="stat-box reveal-on-scroll delay-2">
+                <h3>Ph.D.</h3>
+                <p>IN PROGRESS</p>
+              </div>
+              <div className="stat-box reveal-on-scroll delay-3">
+                <h3>AI/ML</h3>
+                <p>RESEARCH</p>
+              </div>
             </div>
-            <div className="stat-box reveal-on-scroll delay-3">
-              <h3>AI/ML</h3>
-              <p>RESEARCH</p>
-            </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
         {/* About Section */}
         <section id="about" className="about-section reveal-on-scroll">
@@ -127,7 +129,7 @@ export default function App() {
               <span className="section-badge">ABOUT ME</span>
               <h2>Bridging foundational CS with cutting-edge AI.</h2>
               <p>
-                I am an experienced educator and researcher currently serving as an Assistant Professor. With a decade of teaching experience in higher education, I focus on bridging the gap between foundational computer science principles and cutting-edge technological advancements. My academic journey is driven by a deep curiosity for how data and algorithms can solve real-world problems.
+                I am an experienced educator and researcher currently serving as an Assistant Professor and pursuing my <span className="premium-highlight-text">Ph.D. at SR University</span>. With a decade of teaching experience in higher education, I focus on bridging the gap between foundational computer science principles and cutting-edge technological advancements. My academic journey is driven by a deep curiosity for how data and algorithms can solve real-world problems.
               </p>
             </div>
             <div className="about-image-wrapper reveal-on-scroll delay-1">
@@ -152,7 +154,7 @@ export default function App() {
               </div>
               <div className="research-info">
                 <h3>Current Pursuit</h3>
-                <p>Ph.D. in Artificial Intelligence and Machine Learning at <span className="premium-highlight">SR University</span>, Warangal.</p>
+                <p>Ph.D. in Artificial Intelligence and Machine Learning at <span className="premium-highlight-text">SR University</span>, Warangal.</p>
               </div>
             </div>
 
