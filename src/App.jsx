@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MdMenu, MdClose, MdMail, MdOpenInNew } from 'react-icons/md';
 import { 
   FaLinkedin, FaBookOpen, FaGraduationCap, FaBriefcase, 
-  FaCode, FaBrain, FaCar, FaAward, FaGlobe, FaDatabase, FaArrowRight, FaQuoteLeft 
+  FaCode, FaBrain, FaCar, FaAward, FaGlobe, FaDatabase, FaArrowRight 
 } from 'react-icons/fa';
 import './App.css';
 
@@ -45,6 +45,7 @@ export default function App() {
             <span className="logo-desktop">Mohammad Shakeel</span>
           </div>
 
+          {/* Desktop Menu */}
           <div className="desktop-menu">
             <a href="#about" className="nav-link">About</a>
             <a href="#research" className="nav-link">Research</a>
@@ -52,6 +53,7 @@ export default function App() {
             <a href="#contact" className="nav-btn-contact hover-lift">Contact</a>
           </div>
 
+          {/* Mobile Menu Toggle */}
           <button className="mobile-menu-toggle" onClick={toggleSidebar}>
             {isSidebarOpen ? <MdClose size={24} /> : <MdMenu size={24} />}
           </button>
@@ -73,8 +75,9 @@ export default function App() {
 
         {/* Hero Section */}
         <section className="hero-section reveal-on-scroll">
+          {/* Animated Square Matrix Background */}
           <div className="hero-matrix-bg"></div>
-          
+
           <div className="hero-inner">
             <div className="hero-badge-pill">
               <span className="orange-dot"></span>
@@ -85,8 +88,8 @@ export default function App() {
               Mohammad<br />Shakeel
             </h1>
 
+            {/* Profile Image - Moved below the name */}
             <div className="hero-image-wrapper reveal-on-scroll delay-1">
-              <div className="hero-image-decoration"></div>
               <img 
                 src="https://res.cloudinary.com/dppiuypop/image/upload/v1778302345/uploads/bf6majpkpcgculmz1pyf.jpg" 
                 alt="Mohammad Shakeel" 
@@ -101,7 +104,7 @@ export default function App() {
             <div className="hero-actions reveal-on-scroll delay-1">
               <div className="hero-buttons-group">
                 <a href="#contact" className="btn-orange">
-                  Contact Me <FaArrowRight size={12} className="btn-icon-animate" />
+                  Contact Me <FaArrowRight size={12} />
                 </a>
                 <a href="https://scholar.google.com/citations?user=g1MdrbIAAAAJ&hl=en" target="_blank" rel="noreferrer" className="btn-outline">
                   <FaBookOpen size={14} /> Publications
@@ -132,16 +135,12 @@ export default function App() {
           </div>
         </section>
 
-        {/* About Section - Editorial Statement Approach */}
+        {/* About Section */}
         <section id="about" className="about-section reveal-on-scroll">
           <div className="about-content-wrapper">
-            <div className="about-text-statement">
-              <span className="section-badge badge-mint">ABOUT ME</span>
-              <h2>
-                <FaQuoteLeft className="quote-icon" />
-                Bridging foundational computer science with cutting-edge artificial intelligence.
-              </h2>
-              <div className="about-divider"></div>
+            <div className="about-text">
+              <span className="section-badge">ABOUT ME</span>
+              <h2>Bridging foundational CS with cutting-edge AI.</h2>
               <p>
                 I am an experienced educator and researcher currently pursuing my <span className="text-premium-highlight">Ph.D. at SR University</span>. With a decade of teaching experience in higher education, I focus on bridging the gap between foundational computer science principles and cutting-edge technological advancements. My academic journey is driven by a deep curiosity for how data and algorithms can solve real-world problems.
               </p>
@@ -149,28 +148,26 @@ export default function App() {
           </div>
         </section>
 
-        {/* Research Focus - Bento Box Approach */}
+        {/* Research Focus */}
         <section id="research" className="research-section reveal-on-scroll">
-          <div className="section-header">
-            <span className="section-badge">RESEARCH & ACADEMIC FOCUS</span>
-            <h2 className="research-title">Where intelligent algorithms meet modern infrastructure.</h2>
-          </div>
+          <span className="section-badge">RESEARCH & ACADEMIC FOCUS</span>
+          <h2 className="research-title">Where intelligent algorithms meet modern infrastructure.</h2>
 
-          <div className="research-grid bento-grid">
-            <div className="bento-card hover-lift reveal-on-scroll delay-1 border-top-emerald">
+          <div className="research-grid">
+            <div className="research-card hover-lift reveal-on-scroll delay-1">
               <div className="icon-circle icon-green-bg">
                 <FaGraduationCap size={20} className="icon-dark-green" />
               </div>
               <div className="research-info">
                 <h3>Current Pursuit</h3>
                 <p><span className="text-premium-highlight">Ph.D. in Computer Science and Engineering</span> at <span className="text-premium-highlight">SR University</span>, Warangal.</p>
-                <p className="research-subtext"><strong>Research Area:</strong> Artificial Intelligence and Machine Learning.</p>
+                <p style={{ marginTop: '0.4rem' }}><strong>Research Area:</strong> Artificial Intelligence and Machine Learning.</p>
               </div>
             </div>
 
-            <div className="bento-card hover-lift reveal-on-scroll delay-2">
-              <div className="icon-circle icon-gray-bg">
-                <FaBookOpen size={20} className="icon-slate" />
+            <div className="research-card hover-lift reveal-on-scroll delay-2">
+              <div className="icon-circle icon-green-bg">
+                <FaBookOpen size={20} className="icon-dark-green" />
               </div>
               <div className="research-info">
                 <h3>Academic Background</h3>
@@ -178,9 +175,9 @@ export default function App() {
               </div>
             </div>
 
-            <div className="bento-card hover-lift reveal-on-scroll delay-3 border-top-orange">
-              <div className="icon-circle icon-orange-bg">
-                <FaBrain size={20} className="icon-orange" />
+            <div className="research-card hover-lift reveal-on-scroll delay-3">
+              <div className="icon-circle icon-green-bg">
+                <FaBrain size={20} className="icon-dark-green" />
               </div>
               <div className="research-info">
                 <h3>Research Title</h3>
@@ -188,9 +185,9 @@ export default function App() {
               </div>
             </div>
 
-            <div className="bento-card hover-lift reveal-on-scroll delay-4">
-              <div className="icon-circle icon-gray-bg">
-                <FaCar size={20} className="icon-slate" />
+            <div className="research-card hover-lift reveal-on-scroll delay-4">
+              <div className="icon-circle icon-green-bg">
+                <FaCar size={20} className="icon-dark-green" />
               </div>
               <div className="research-info">
                 <h3>Domain Focus</h3>
@@ -200,121 +197,119 @@ export default function App() {
           </div>
         </section>
 
-        {/* Experience Section - Dark Glassmorphism Approach */}
+        {/* Experience Section */}
         <section id="experience" className="experience-wrapper reveal-on-scroll">
-          <div className="experience-dark-card">
-            <div className="experience-glow-orb"></div>
-            
-            <div className="experience-content-relative">
-              <div className="exp-badge">
-                <FaBriefcase size={12} />
-                PROFESSIONAL EXPERIENCE
-              </div>
+          <div className="experience-dark-card hover-lift">
 
-              <h2 className="exp-title">Assistant Professor</h2>
-              <p className="exp-subtitle">TKR College of Engineering · 10 Years</p>
-
-              <p className="exp-desc">
-                For the past decade, I have been deeply invested in academic instruction and student mentorship. I deliver comprehensive lectures on core computer science subjects, guide students through complex technical projects, and help them build practical, industry-ready skills.
-              </p>
-
-              <div className="glass-cards-list">
-                <div className="glass-card hover-lift reveal-on-scroll delay-1">
-                  <div className="glass-icon-wrapper"><FaAward size={20} /></div>
-                  <div className="highlight-text">
-                    <strong>Mentorship</strong>
-                    <p>Guiding student capstone & research projects</p>
-                  </div>
-                </div>
-
-                <div className="glass-card hover-lift reveal-on-scroll delay-2">
-                  <div className="glass-icon-wrapper"><FaBookOpen size={20} /></div>
-                  <div className="highlight-text">
-                    <strong>Curriculum</strong>
-                    <p>Core CS subjects & emerging technologies</p>
-                  </div>
-                </div>
-
-                <div className="glass-card hover-lift reveal-on-scroll delay-3">
-                  <div className="glass-icon-wrapper"><FaBrain size={20} /></div>
-                  <div className="highlight-text">
-                    <strong>Industry-Ready</strong>
-                    <p>Bridging theory with practical skills</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Skills Section - Minimalist Premium Cards */}
-        <section id="skills" className="skills-section reveal-on-scroll">
-          <div className="section-header text-center">
-            <span className="section-badge">TECHNICAL SKILLS</span>
-            <h2 className="skills-title">Instructional expertise across core subjects.</h2>
-          </div>
-
-          <div className="skills-card-grid">
-            <div className="premium-skill-card hover-lift reveal-on-scroll delay-1">
-              <div className="skill-card-header">
-                <FaCode className="skill-icon-accent" size={22} />
-                <h3>Programming</h3>
-              </div>
-              <div className="skill-tags-light">
-                <span>C</span><span>C++</span><span>Java</span><span>Python</span>
-              </div>
+            <div className="exp-badge">
+              <FaBriefcase size={12} />
+              PROFESSIONAL EXPERIENCE
             </div>
 
-            <div className="premium-skill-card hover-lift reveal-on-scroll delay-2">
-              <div className="skill-card-header">
-                <FaGlobe className="skill-icon-accent" size={22} />
-                <h3>Web Technologies</h3>
-              </div>
-              <div className="skill-tags-light">
-                <span>HTML</span><span>JavaScript</span>
-              </div>
-            </div>
+            <h2 className="exp-title">Assistant Professor</h2>
+            <p className="exp-subtitle">TKR College of Engineering · 10 Years</p>
 
-            <div className="premium-skill-card hover-lift reveal-on-scroll delay-3">
-              <div className="skill-card-header">
-                <FaDatabase className="skill-icon-accent" size={22} />
-                <h3>Database Systems</h3>
-              </div>
-              <div className="skill-tags-light">
-                <span>DBMS</span><span>SQL</span><span>Data Modeling</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact CTA - Soft Mesh Gradient Approach */}
-        <section id="contact" className="contact-section-mesh reveal-on-scroll">
-          <div className="contact-mesh-inner">
-            <span className="section-badge bg-white">CONTACT & CONNECT</span>
-            <h2>Let's collaborate on research or academia.</h2>
-            <p className="contact-subtitle">
-              Always open to academic collaborations, research discussions, and professional networking.
+            <p className="exp-desc">
+              For the past decade, I have been deeply invested in academic instruction and student mentorship. I deliver comprehensive lectures on core computer science subjects, guide students through complex technical projects, and help them build practical, industry-ready skills.
             </p>
 
-            <div className="contact-actions-grid">
-              <a href="mailto:2503c50089@sru.edu.in" className="btn-contact-email hover-lift reveal-on-scroll delay-1">
-                <MdMail size={20} /> 2503c50089@sru.edu.in
-              </a>
+            <div className="exp-highlights-list">
 
-              <div className="contact-socials-row">
-                <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-2">
-                  <FaLinkedin size={18} className="social-icon" /> LinkedIn
-                </a>
-                <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-3">
-                  <MdOpenInNew size={18} className="social-icon" /> ORCID
-                </a>
+              <div className="exp-highlight-card reveal-on-scroll delay-1">
+                <FaAward className="highlight-icon" size={22} />
+                <div className="highlight-text">
+                  <strong>Mentorship</strong>
+                  <p>Guiding student capstone & research projects</p>
+                </div>
               </div>
+
+              <div className="exp-highlight-card reveal-on-scroll delay-2">
+                <FaBookOpen className="highlight-icon" size={22} />
+                <div className="highlight-text">
+                  <strong>Curriculum</strong>
+                  <p>Core CS subjects & emerging technologies</p>
+                </div>
+              </div>
+
+              <div className="exp-highlight-card reveal-on-scroll delay-3">
+                <FaBrain className="highlight-icon" size={22} />
+                <div className="highlight-text">
+                  <strong>Industry-Ready</strong>
+                  <p>Bridging theory with practical skills</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Skills & Core Subjects Section */}
+        <section id="skills" className="skills-section reveal-on-scroll">
+          <span className="section-badge">TECHNICAL SKILLS & CORE SUBJECTS</span>
+          <h2 className="skills-title">Instructional expertise across core computer science subjects.</h2>
+
+          <div className="skills-card-grid">
+
+            <div className="skill-card-light hover-lift reveal-on-scroll delay-1">
+              <FaCode className="skill-icon-orange" size={24} />
+              <h3>Programming Languages</h3>
+              <div className="skill-tags-light">
+                <span>C</span>
+                <span>C++</span>
+                <span>Java</span>
+                <span>Python</span>
+              </div>
+            </div>
+
+            <div className="skill-card-light hover-lift reveal-on-scroll delay-2">
+              <FaGlobe className="skill-icon-orange" size={24} />
+              <h3>Web Technologies</h3>
+              <div className="skill-tags-light">
+                <span>HTML</span>
+                <span>JavaScript</span>
+              </div>
+            </div>
+
+            <div className="skill-card-light hover-lift reveal-on-scroll delay-3">
+              <FaDatabase className="skill-icon-orange" size={24} />
+              <h3>Database & Systems</h3>
+              <div className="skill-tags-light">
+                <span>DBMS</span>
+                <span>SQL</span>
+                <span>Data Modeling</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* Contact CTA */}
+        <section id="contact" className="contact-section-mint reveal-on-scroll">
+          <span className="section-badge bg-white">CONTACT & CONNECT</span>
+          <h2>Let's collaborate on research or academia.</h2>
+          <p className="contact-subtitle">
+            Always open to academic collaborations, research discussions, and professional networking.
+          </p>
+
+          <div className="contact-actions-grid">
+            <a href="mailto:2503c50089@sru.edu.in" className="btn-contact-email hover-lift reveal-on-scroll delay-1">
+              <MdMail size={20} /> 2503c50089@sru.edu.in
+            </a>
+
+            <div className="contact-socials-row">
+              <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-2">
+                <FaLinkedin size={18} /> LinkedIn
+              </a>
+              <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-3">
+                <MdOpenInNew size={18} /> ORCID
+              </a>
             </div>
           </div>
         </section>
 
       </main>
 
+      {/* Footer */}
       <footer className="footer reveal-on-scroll">
         <div className="footer-content">
           <p>© 2026 Mohammad Shakeel. All rights reserved.</p>
