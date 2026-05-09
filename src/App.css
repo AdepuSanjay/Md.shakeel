@@ -284,8 +284,8 @@ section[id], div[id] {
   width: 120%;
   height: 120%;
   background-image: 
-    linear-gradient(rgba(249, 115, 22, 0.15) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(249, 115, 22, 0.15) 1px, transparent 1px);
+    linear-gradient(rgba(249, 115, 22, 0.25) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 115, 22, 0.25) 1px, transparent 1px);
   background-size: 40px 40px;
   z-index: 0;
   animation: matrix-scroll 15s linear infinite;
