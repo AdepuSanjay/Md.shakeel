@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MdMenu, MdClose, MdMail, MdOpenInNew } from 'react-icons/md';
 import { 
   FaLinkedin, FaBookOpen, FaGraduationCap, FaBriefcase, 
-  FaCode, FaBrain, FaCar, FaAward, FaGlobe, FaDatabase, FaArrowRight, FaGoogle 
+  FaCode, FaBrain, FaCar, FaAward, FaGlobe, FaDatabase, FaArrowRight 
 } from 'react-icons/fa';
 import './App.css';
 
@@ -40,8 +40,8 @@ export default function App() {
       {/* Navbar - Fixed with Glassmorphism */}
       <nav className="navbar">
         <div className="navbar-inner">
-          <div className="logo logo-text">
-            Mohammad Shakeel Portfolio
+          <div className="logo">
+            mohammad shakeel portfolio
           </div>
 
           {/* Desktop Menu */}
@@ -72,55 +72,50 @@ export default function App() {
 
       <main className="main-content">
 
-        {/* Hero Section (Premium Look) */}
+        {/* Hero Section */}
         <section className="hero-section reveal-on-scroll">
-          <div className="hero-premium-bg"></div>
-          <div className="hero-content">
-            <div className="hero-badge-pill">
-              <span className="orange-dot"></span>
-              AI RESEARCH SCHOLAR · ASSISTANT PROFESSOR
+          <div className="hero-badge-pill">
+            <span className="premium-dot"></span>
+            AI RESEARCH SCHOLAR · ASSISTANT PROFESSOR
+          </div>
+
+          <h1 className="hero-title">
+            Mohammad<br />Shakeel
+          </h1>
+
+          <p className="hero-subtitle">
+            Dedicated to advancing computer science education and pioneering research in <strong>Intelligent Transportation Systems.</strong> Currently pursuing my <span className="premium-highlight">Ph.D. at SR University</span>, backing a decade of academic experience with cutting-edge AI research.
+          </p>
+
+          <div className="hero-actions reveal-on-scroll delay-1">
+            <div className="hero-buttons-group">
+              <a href="#contact" className="btn-primary">
+                Contact Me <FaArrowRight size={12} />
+              </a>
+              <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-outline">
+                <FaLinkedin size={14} /> LinkedIn
+              </a>
+              <a href="https://scholar.google.com/citations?user=g1MdrbIAAAAJ&hl=en" target="_blank" rel="noreferrer" className="btn-outline">
+                <FaBookOpen size={14} /> Publications
+              </a>
+              <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-outline">
+                <MdOpenInNew size={14} /> ORCID
+              </a>
             </div>
+          </div>
 
-            <h1 className="hero-title">
-              Mohammad<br />Shakeel
-            </h1>
-
-            <p className="hero-subtitle">
-              Dedicated to advancing computer science education and pioneering research in <strong>Intelligent Transportation Systems.</strong> Backed by a decade of academic experience and a commitment to shaping the next generation of engineers.
-            </p>
-
-            <div className="hero-actions reveal-on-scroll delay-1">
-              <div className="hero-buttons-group">
-                <a href="#contact" className="btn-orange">
-                  Contact Me <FaArrowRight size={12} />
-                </a>
-                <a href="https://scholar.google.com/citations?user=g1MdrbIAAAAJ&hl=en" target="_blank" rel="noreferrer" className="btn-outline">
-                  <FaGraduationCap size={15} /> Publications
-                </a>
-                <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-outline">
-                  <FaLinkedin size={14} /> LinkedIn
-                </a>
-              </div>
-              <div className="hero-buttons-group mt-mobile-fix">
-                <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-outline">
-                  <MdOpenInNew size={14} /> ORCID
-                </a>
-              </div>
+          <div className="hero-stats">
+            <div className="stat-box reveal-on-scroll delay-1">
+              <h3>10+</h3>
+              <p>YEARS TEACHING</p>
             </div>
-
-            <div className="hero-stats">
-              <div className="stat-box reveal-on-scroll delay-1">
-                <h3>10+</h3>
-                <p>YEARS TEACHING</p>
-              </div>
-              <div className="stat-box reveal-on-scroll delay-2">
-                <h3>Ph.D.</h3>
-                <p>IN PROGRESS</p>
-              </div>
-              <div className="stat-box reveal-on-scroll delay-3">
-                <h3>AI/ML</h3>
-                <p>RESEARCH</p>
-              </div>
+            <div className="stat-box reveal-on-scroll delay-2">
+              <h3>Ph.D.</h3>
+              <p>IN PROGRESS</p>
+            </div>
+            <div className="stat-box reveal-on-scroll delay-3">
+              <h3>AI/ML</h3>
+              <p>RESEARCH</p>
             </div>
           </div>
         </section>
@@ -132,10 +127,7 @@ export default function App() {
               <span className="section-badge">ABOUT ME</span>
               <h2>Bridging foundational CS with cutting-edge AI.</h2>
               <p>
-                I am an experienced educator and researcher currently serving as an Assistant Professor at TKR College of Engineering. With a decade of teaching experience in higher education, I focus on bridging the gap between foundational computer science principles and cutting-edge technological advancements.
-              </p>
-              <p className="phd-highlight mt-4">
-                <strong>Currently pursuing my Ph.D. at SR University</strong>, my academic journey is driven by a deep curiosity for how data and intelligent algorithms can solve real-world problems.
+                I am an experienced educator and researcher currently serving as an Assistant Professor. With a decade of teaching experience in higher education, I focus on bridging the gap between foundational computer science principles and cutting-edge technological advancements. My academic journey is driven by a deep curiosity for how data and algorithms can solve real-world problems.
               </p>
             </div>
             <div className="about-image-wrapper reveal-on-scroll delay-1">
@@ -155,18 +147,18 @@ export default function App() {
 
           <div className="research-grid">
             <div className="research-card hover-lift reveal-on-scroll delay-1">
-              <div className="icon-circle icon-green-bg">
-                <FaGraduationCap size={20} className="icon-dark-green" />
+              <div className="icon-circle icon-premium-bg">
+                <FaGraduationCap size={20} className="icon-premium" />
               </div>
               <div className="research-info">
                 <h3>Current Pursuit</h3>
-                <p>Ph.D. in Artificial Intelligence and Machine Learning at SR University, Warangal.</p>
+                <p>Ph.D. in Artificial Intelligence and Machine Learning at <span className="premium-highlight">SR University</span>, Warangal.</p>
               </div>
             </div>
 
             <div className="research-card hover-lift reveal-on-scroll delay-2">
-              <div className="icon-circle icon-green-bg">
-                <FaBookOpen size={20} className="icon-dark-green" />
+              <div className="icon-circle icon-premium-bg">
+                <FaBookOpen size={20} className="icon-premium" />
               </div>
               <div className="research-info">
                 <h3>Academic Background</h3>
@@ -175,8 +167,8 @@ export default function App() {
             </div>
 
             <div className="research-card hover-lift reveal-on-scroll delay-3">
-              <div className="icon-circle icon-green-bg">
-                <FaBrain size={20} className="icon-dark-green" />
+              <div className="icon-circle icon-premium-bg">
+                <FaBrain size={20} className="icon-premium" />
               </div>
               <div className="research-info">
                 <h3>Research Title</h3>
@@ -185,8 +177,8 @@ export default function App() {
             </div>
 
             <div className="research-card hover-lift reveal-on-scroll delay-4">
-              <div className="icon-circle icon-green-bg">
-                <FaCar size={20} className="icon-dark-green" />
+              <div className="icon-circle icon-premium-bg">
+                <FaCar size={20} className="icon-premium" />
               </div>
               <div className="research-info">
                 <h3>Domain Focus</h3>
@@ -206,7 +198,7 @@ export default function App() {
             </div>
 
             <h2 className="exp-title">Assistant Professor</h2>
-            <p className="exp-subtitle">TKR College of Engineering · 10 Years</p>
+            <p className="exp-subtitle">10 Years in Academia</p>
 
             <p className="exp-desc">
               For the past decade, I have been deeply invested in academic instruction and student mentorship. I deliver comprehensive lectures on core computer science subjects, guide students through complex technical projects, and help them build practical, industry-ready skills.
@@ -250,7 +242,7 @@ export default function App() {
           <div className="skills-card-grid">
 
             <div className="skill-card-light hover-lift reveal-on-scroll delay-1">
-              <FaCode className="skill-icon-orange" size={24} />
+              <FaCode className="skill-icon-primary" size={24} />
               <h3>Programming Languages</h3>
               <div className="skill-tags-light">
                 <span>C</span>
@@ -261,7 +253,7 @@ export default function App() {
             </div>
 
             <div className="skill-card-light hover-lift reveal-on-scroll delay-2">
-              <FaGlobe className="skill-icon-orange" size={24} />
+              <FaGlobe className="skill-icon-primary" size={24} />
               <h3>Web Technologies</h3>
               <div className="skill-tags-light">
                 <span>HTML</span>
@@ -270,7 +262,7 @@ export default function App() {
             </div>
 
             <div className="skill-card-light hover-lift reveal-on-scroll delay-3">
-              <FaDatabase className="skill-icon-orange" size={24} />
+              <FaDatabase className="skill-icon-primary" size={24} />
               <h3>Database & Systems</h3>
               <div className="skill-tags-light">
                 <span>DBMS</span>
@@ -296,13 +288,10 @@ export default function App() {
             </a>
 
             <div className="contact-socials-row">
-              <a href="https://scholar.google.com/citations?user=g1MdrbIAAAAJ&hl=en" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-2">
-                <FaGraduationCap size={18} /> Publications
-              </a>
-              <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-3">
+              <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-2">
                 <FaLinkedin size={18} /> LinkedIn
               </a>
-              <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-4">
+              <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-3">
                 <MdOpenInNew size={18} /> ORCID
               </a>
             </div>
@@ -315,7 +304,7 @@ export default function App() {
       <footer className="footer reveal-on-scroll">
         <div className="footer-content">
           <p>© 2026 Mohammad Shakeel. All rights reserved.</p>
-          <p className="footer-role">Ph.D. Research Scholar · SR University</p>
+          <p className="footer-role">AI Research Scholar · SR UNIVERSITY</p>
         </div>
       </footer>
     </div>
