@@ -157,7 +157,8 @@ export default function App() {
               </div>
               <div className="research-info">
                 <h3>Current Pursuit</h3>
-                <p><span className="text-premium-highlight">Ph.D.</span> in Artificial Intelligence and Machine Learning at <span className="text-premium-highlight">SR University</span>, Warangal.</p>
+                <p><span className="text-premium-highlight">Ph.D. in Computer Science and Engineering</span> at <span className="text-premium-highlight">SR University</span>, Warangal.</p>
+                <p style={{ marginTop: '0.4rem' }}><strong>Research Area:</strong> Artificial Intelligence and Machine Learning.</p>
               </div>
             </div>
 
