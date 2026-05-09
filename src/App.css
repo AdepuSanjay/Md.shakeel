@@ -269,15 +269,42 @@ section[id], div[id] {
   padding: 0 1.25rem;
 }
 
-/* ---- Hero Section ---- */
+/* ---- Hero Section & Animated Matrix ---- */
 .hero-section {
   padding: 7rem 0 3rem; 
   text-align: left;
+  position: relative; /* Necessary to contain the absolute matrix */
+  overflow: hidden;
+}
+
+.hero-matrix-bg {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-image: 
+    linear-gradient(rgba(249, 115, 22, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 115, 22, 0.15) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+  animation: matrix-scroll 15s linear infinite;
+  /* Premium radial mask to smoothly fade out edges */
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 75%);
+  mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 75%);
+  pointer-events: none;
+}
+
+@keyframes matrix-scroll {
+  0% { transform: translateY(0px) translateX(0px); }
+  100% { transform: translateY(40px) translateX(40px); }
 }
 
 .hero-inner {
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1; /* Elevates content cleanly above the background */
 }
 
 .hero-badge-pill {
@@ -797,7 +824,7 @@ section[id], div[id] {
     align-items: start;
     column-gap: 3rem;
   }
-  
+
   .hero-badge-pill { grid-area: badge; justify-self: flex-start; }
   .hero-title { grid-area: title; }
   .hero-image-wrapper { 
