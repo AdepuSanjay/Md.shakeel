@@ -41,7 +41,7 @@ export default function App() {
       <nav className="navbar">
         <div className="navbar-inner">
           <div className="logo">
-            <span className="logo-mobile">mohammad shakeel portfolio</span>
+            <span className="logo-mobile">Mohammad Shakeel Portfolio</span>
             <span className="logo-desktop">Mohammad Shakeel</span>
           </div>
 
