@@ -88,13 +88,25 @@ export default function App() {
               Mohammad<br />Shakeel
             </h1>
 
-            {/* Profile Image - Moved below the name */}
+            {/* Profile Image with Floating Badges */}
             <div className="hero-image-wrapper reveal-on-scroll delay-1">
               <img 
                 src="https://res.cloudinary.com/dppiuypop/image/upload/v1778302345/uploads/bf6majpkpcgculmz1pyf.jpg" 
                 alt="Mohammad Shakeel" 
                 className="hero-profile-image hover-lift"
               />
+              
+              {/* Top Right Blue Badge */}
+              <div className="floating-badge badge-top-right">
+                <span className="badge-label">Pursuing</span>
+                <span className="badge-value">PhD - AI & ML</span>
+              </div>
+
+              {/* Bottom Left White Badge */}
+              <div className="floating-badge badge-bottom-left">
+                <span className="badge-label">Current Position</span>
+                <span className="badge-value">Asst. Professor</span>
+              </div>
             </div>
 
             <p className="hero-subtitle">
