@@ -95,22 +95,10 @@ export default function App() {
                 alt="Mohammad Shakeel" 
                 className="hero-profile-image hover-lift"
               />
-              
-              {/* Top Right Blue Badge */}
-              <div className="floating-badge badge-top-right">
-                <span className="badge-label">Pursuing</span>
-                <span className="badge-value">PhD - AI & ML</span>
-              </div>
-
-              {/* Bottom Left White Badge */}
-              <div className="floating-badge badge-bottom-left">
-                <span className="badge-label">Current Position</span>
-                <span className="badge-value">Asst. Professor</span>
-              </div>
             </div>
 
             <p className="hero-subtitle">
-              Dedicated to advancing computer science education and pioneering research in <strong>Intelligent Transportation Systems.</strong> Currently pursuing a <span className="text-premium-highlight">Ph.D. at SR University</span> under the guidance of <span className="text-premium-highlight">Dr. V. Sudha Rani</span>, backed by a decade of academic experience and a commitment to shaping the next generation of engineers.
+              Dedicated to advancing computer science education and pioneering research in <strong>Intelligent Transportation Systems.</strong> Currently pursuing a <span className="text-premium-highlight">Ph.D. at SR University</span> under the guidance of   <span className="text-premium-highlight">  Dr. V. Sudha Rani</span>, backed by a decade of academic experience and a commitment to shaping the next generation of engineers.
             </p>
 
             <div className="hero-actions reveal-on-scroll delay-1">
