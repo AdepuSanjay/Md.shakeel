@@ -144,6 +144,7 @@ section[id], div[id] {
 .logo-mobile {
   display: block;
   font-size: 0.95rem;
+  text-transform: lowercase;
 }
 
 .logo-desktop {
@@ -314,7 +315,7 @@ section[id], div[id] {
   border: 1px solid #cbd5e1;
   background-color: #f8fafc;
   box-shadow: 0 2px 10px rgba(0,0,0,0.02);
-  font-size: 0.55rem; /* Reduced for mobile */
+  font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   color: var(--text-muted);
@@ -330,7 +331,7 @@ section[id], div[id] {
 }
 
 .hero-title {
-  font-size: 1.9rem; /* Reduced for mobile */
+  font-size: 1.85rem; /* Reduced from 2.15rem */
   font-weight: 800;
   letter-spacing: -0.02em;
   line-height: 1.15;
@@ -411,7 +412,7 @@ section[id], div[id] {
 
 /* Badge Text Styling */
 .badge-label {
-  font-size: 0.6rem; /* Reduced for mobile */
+  font-size: 0.65rem;
   font-weight: 500;
   opacity: 0.9;
 }
@@ -425,14 +426,14 @@ section[id], div[id] {
 }
 
 .badge-value {
-  font-size: 0.75rem; /* Reduced for mobile */
+  font-size: 0.85rem;
   font-weight: 700;
 }
 
 /* --------------------------------- */
 
 .hero-subtitle {
-  font-size: 0.8rem; /* Reduced for mobile */
+  font-size: 0.8rem; /* Reduced from 0.85rem */
   color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 2.25rem;
@@ -465,7 +466,7 @@ section[id], div[id] {
   padding: 0.75rem 1.25rem;
   border-radius: 9999px;
   font-weight: 600;
-  font-size: 0.8rem; /* Reduced for mobile */
+  font-size: 0.8rem; /* Reduced from 0.85rem */
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -502,14 +503,14 @@ section[id], div[id] {
 }
 
 .stat-box h3 {
-  font-size: 1rem; /* Reduced for mobile */
+  font-size: 1rem; /* Reduced from 1.15rem */
   font-weight: 800;
   color: #000;
   margin-bottom: 0.25rem;
 }
 
 .stat-box p {
-  font-size: 0.5rem; /* Reduced for mobile */
+  font-size: 0.5rem; /* Reduced from 0.55rem */
   font-weight: 700;
   letter-spacing: 0.05em;
   color: var(--text-muted);
@@ -832,12 +833,9 @@ section[id], div[id] {
   .hero-section { padding: 8rem 0 4rem; }
   .hero-title { font-size: 3.5rem; }
   .hero-subtitle { font-size: 1rem; }
-  .hero-badge-pill { font-size: 0.6rem; }
   .btn-orange, .btn-outline { font-size: 0.95rem; }
   .stat-box h3 { font-size: 1.75rem; }
   .stat-box p { font-size: 0.65rem; }
-  .badge-label { font-size: 0.65rem; }
-  .badge-value { font-size: 0.85rem; }
 
   .about-text h2 { font-size: 2rem; }
   .about-text p { font-size: 1rem; }
