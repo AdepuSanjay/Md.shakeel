@@ -16,7 +16,7 @@ export default function App() {
     const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.12,
+      threshold: 0.15, // Triggers slightly later in the viewport
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -43,7 +43,7 @@ export default function App() {
           <div className="logo">
             MD.Shakeel
           </div>
-          
+
           {/* Desktop Menu */}
           <div className="desktop-menu">
             <a href="#about" className="nav-link">About</a>
@@ -71,34 +71,34 @@ export default function App() {
       </div>
 
       <main className="main-content">
-        
+
         {/* Hero Section */}
         <section className="hero-section reveal-on-scroll">
           <div className="hero-badge-pill">
             <span className="orange-dot"></span>
             ASSISTANT PROFESSOR · AI RESEARCHER
           </div>
-          
+
           <h1 className="hero-title">
             Mohammad<br />Shakeel
           </h1>
-          
+
           <p className="hero-subtitle">
             Dedicated to advancing computer science education and pioneering research in <strong>Intelligent Transportation Systems.</strong> Backed by a decade of academic experience and a commitment to shaping the next generation of engineers.
           </p>
-          
+
           <div className="hero-actions">
             <div className="hero-buttons-group">
               <a href="#contact" className="btn-orange">
-                Contact Me <FaArrowRight size={14} />
+                Contact Me <FaArrowRight size={12} />
               </a>
               <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-outline">
-                <FaLinkedin size={16} /> LinkedIn
+                <FaLinkedin size={14} /> LinkedIn
               </a>
             </div>
             <div className="hero-buttons-group">
               <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-outline">
-                <MdOpenInNew size={16} /> ORCID
+                <MdOpenInNew size={14} /> ORCID
               </a>
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function App() {
         <section id="research" className="research-section reveal-on-scroll">
           <span className="section-badge">RESEARCH & ACADEMIC FOCUS</span>
           <h2 className="research-title">Where intelligent algorithms meet modern infrastructure.</h2>
-          
+
           <div className="research-grid">
             <div className="research-card hover-lift">
               <div className="icon-circle icon-green-bg">
@@ -190,7 +190,7 @@ export default function App() {
         {/* Experience Section */}
         <section id="experience" className="experience-wrapper reveal-on-scroll">
           <div className="experience-dark-card hover-lift">
-            
+
             <div className="exp-badge">
               <FaBriefcase size={12} />
               PROFESSIONAL EXPERIENCE
@@ -204,7 +204,7 @@ export default function App() {
             </p>
 
             <div className="exp-highlights-list">
-              
+
               <div className="exp-highlight-card">
                 <FaAward className="highlight-icon" size={22} />
                 <div className="highlight-text">
@@ -239,7 +239,7 @@ export default function App() {
           <h2 className="skills-title">Instructional expertise across core computer science subjects.</h2>
 
           <div className="skills-card-grid">
-            
+
             <div className="skill-card-light hover-lift">
               <FaCode className="skill-icon-orange" size={24} />
               <h3>Programming Languages</h3>
@@ -280,12 +280,12 @@ export default function App() {
           <p className="contact-subtitle">
             Always open to academic collaborations, research discussions, and professional networking.
           </p>
-          
+
           <div className="contact-actions-grid">
             <a href="mailto:2503c50089@sru.edu.in" className="btn-contact-email hover-lift">
               <MdMail size={20} /> 2503c50089@sru.edu.in
             </a>
-            
+
             <div className="contact-socials-row">
               <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift">
                 <FaLinkedin size={18} /> LinkedIn
