@@ -273,7 +273,7 @@ section[id], div[id] {
 .hero-section {
   padding: 7rem 0 3rem; 
   text-align: left;
-  position: relative; /* Necessary to contain the absolute matrix */
+  position: relative;
   overflow: hidden;
 }
 
@@ -284,12 +284,11 @@ section[id], div[id] {
   width: 120%;
   height: 120%;
   background-image: 
-    linear-gradient(rgba(249, 115, 22, 0.25) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(249, 115, 22, 0.25) 1px, transparent 1px);
+    linear-gradient(rgba(249, 115, 22, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(249, 115, 22, 0.08) 1px, transparent 1px);
   background-size: 40px 40px;
   z-index: 0;
   animation: matrix-scroll 15s linear infinite;
-  /* Premium radial mask to smoothly fade out edges */
   -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 75%);
   mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 75%);
   pointer-events: none;
@@ -304,7 +303,7 @@ section[id], div[id] {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 1; /* Elevates content cleanly above the background */
+  z-index: 1; 
 }
 
 .hero-badge-pill {
@@ -340,7 +339,7 @@ section[id], div[id] {
   color: #000;
 }
 
-/* Moved Hero Image Styling */
+/* ---- Floating Profile Badges & Image ---- */
 .hero-image-wrapper {
   position: relative;
   display: flex;
@@ -371,6 +370,67 @@ section[id], div[id] {
   border-radius: 1.25rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
+
+/* Badge Structural Styles */
+.floating-badge {
+  position: absolute;
+  padding: 0.65rem 1rem;
+  border-radius: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  animation: float 4s ease-in-out infinite;
+  min-width: 120px;
+}
+
+/* Float Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Blue Badge (Top Right) */
+.badge-top-right {
+  top: 5%;
+  right: -5%;
+  background-color: #2563eb; 
+  color: white;
+  animation-delay: 0s;
+}
+
+/* White Badge (Bottom Left) */
+.badge-bottom-left {
+  bottom: 5%;
+  left: -5%;
+  background-color: white;
+  color: var(--text-dark);
+  animation-delay: 2s; /* offset animation so they don't move exactly together */
+}
+
+/* Badge Text Styling */
+.badge-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.badge-top-right .badge-label {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.badge-bottom-left .badge-label {
+  color: var(--text-muted);
+}
+
+.badge-value {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* --------------------------------- */
 
 .hero-subtitle {
   font-size: 0.85rem; 
@@ -830,7 +890,7 @@ section[id], div[id] {
   .hero-image-wrapper { 
     grid-area: image; 
     justify-self: center; 
-    align-self: center; /* Centers the image nicely against the text block */
+    align-self: center; 
     margin: 0;
   }
   .hero-subtitle { grid-area: subtitle; }
@@ -840,7 +900,22 @@ section[id], div[id] {
   .hero-image-wrapper::before { width: 16rem; height: 19rem; }
   .hero-profile-image { width: 15rem; height: 18rem; }
 
-  /* Adjust About section layout since image is removed */
+  /* Push badges further out on larger screens */
+  .floating-badge {
+    padding: 0.75rem 1.25rem;
+  }
+  .badge-value {
+    font-size: 0.95rem;
+  }
+  .badge-top-right {
+    top: 10%;
+    right: -15%;
+  }
+  .badge-bottom-left {
+    bottom: 10%;
+    left: -15%;
+  }
+
   .about-section { 
     margin-left: 0;
     margin-right: 0;
