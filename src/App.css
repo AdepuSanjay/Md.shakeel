@@ -269,24 +269,18 @@ section[id], div[id] {
   padding: 0 1.25rem;
 }
 
-/* ---- Hero Section (Now with Image) ---- */
+/* ---- Hero Section ---- */
 .hero-section {
   padding: 7rem 0 3rem; 
+  text-align: left;
 }
 
-.hero-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 3.5rem;
-}
-
-.hero-text-content {
+.hero-inner {
   display: flex;
   flex-direction: column;
 }
 
 .hero-badge-pill {
-  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -317,6 +311,38 @@ section[id], div[id] {
   line-height: 1.15;
   margin-bottom: 1.25rem;
   color: #000;
+}
+
+/* Moved Hero Image Styling */
+.hero-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.hero-image-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 12rem;
+  height: 15rem;
+  background-color: var(--mint-border);
+  border-radius: 1.5rem;
+  transform: rotate(-4deg);
+  z-index: 0;
+}
+
+.hero-profile-image {
+  position: relative;
+  z-index: 1;
+  width: 11rem;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 .hero-subtitle {
@@ -405,39 +431,7 @@ section[id], div[id] {
   line-height: 1.4;
 }
 
-/* Hero Image Wrapper */
-.hero-image-wrapper {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  width: 100%;
-}
-
-.hero-image-wrapper::before {
-  content: '';
-  position: absolute;
-  width: 14rem;
-  height: 16rem;
-  background-color: var(--mint-bg);
-  border: 1px solid var(--border-light);
-  border-radius: 1.5rem;
-  transform: rotate(4deg);
-  z-index: 0;
-}
-
-.hero-profile-image {
-  position: relative;
-  z-index: 1;
-  width: 13rem;
-  height: 15rem;
-  object-fit: cover;
-  border-radius: 1.25rem;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-/* ---- About Section (Now Text Only & Centered) ---- */
+/* ---- About Section ---- */
 .about-section {
   background-color: var(--mint-bg);
   margin-left: -1.25rem;
@@ -449,15 +443,8 @@ section[id], div[id] {
 .about-content-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  gap: 2.5rem;
   max-width: 56rem;
-  margin: 0 auto;
-}
-
-.about-text {
-  width: 100%;
-  max-width: 48rem;
   margin: 0 auto;
 }
 
@@ -797,20 +784,36 @@ section[id], div[id] {
   .hero-section { padding: 10rem 0 5rem; } 
   .hero-title { font-size: 4rem; }
 
-  /* Hero Desktop Layout (Two Columns) */
-  .hero-content-wrapper {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
+  /* Hero CSS Grid layout for Desktop */
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-areas: 
+      "badge    image"
+      "title    image"
+      "subtitle image"
+      "actions  image"
+      "stats    image";
+    align-items: start;
+    column-gap: 3rem;
   }
   
-  .hero-text-content { width: 55%; }
-  .hero-image-wrapper { width: 45%; }
-  
-  .hero-image-wrapper::before { width: 17rem; height: 21rem; }
-  .hero-profile-image { width: 16rem; height: 20rem; }
+  .hero-badge-pill { grid-area: badge; justify-self: flex-start; }
+  .hero-title { grid-area: title; }
+  .hero-image-wrapper { 
+    grid-area: image; 
+    justify-self: center; 
+    align-self: center; /* Centers the image nicely against the text block */
+    margin: 0;
+  }
+  .hero-subtitle { grid-area: subtitle; }
+  .hero-actions { grid-area: actions; }
+  .hero-stats { grid-area: stats; }
 
+  .hero-image-wrapper::before { width: 16rem; height: 19rem; }
+  .hero-profile-image { width: 15rem; height: 18rem; }
+
+  /* Adjust About section layout since image is removed */
   .about-section { 
     margin-left: 0;
     margin-right: 0;
@@ -818,6 +821,12 @@ section[id], div[id] {
     padding: 4rem;
   }
 
+  .about-content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-text { width: 100%; max-width: 50rem; }
   .about-text h2 { font-size: 2.25rem; }
 
   .research-title { font-size: 2.5rem; }
