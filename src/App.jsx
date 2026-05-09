@@ -16,7 +16,7 @@ export default function App() {
     const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.15,
+      threshold: 0.15, 
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -27,6 +27,7 @@ export default function App() {
       });
     }, observerOptions);
 
+    // This will now dynamically pick up both parent sections and their staggered children
     const revealElements = document.querySelectorAll('.reveal-on-scroll');
     revealElements.forEach((el) => observer.observe(el));
 
@@ -73,7 +74,7 @@ export default function App() {
       <main className="main-content">
 
         {/* Hero Section */}
-        <section id="hero" className="hero-section reveal-on-scroll">
+        <section className="hero-section reveal-on-scroll">
           <div className="hero-badge-pill">
             <span className="orange-dot"></span>
             ASSISTANT PROFESSOR · AI RESEARCHER
@@ -87,32 +88,32 @@ export default function App() {
             Dedicated to advancing computer science education and pioneering research in <strong>Intelligent Transportation Systems.</strong> Backed by a decade of academic experience and a commitment to shaping the next generation of engineers.
           </p>
 
-          <div className="hero-actions">
+          <div className="hero-actions reveal-on-scroll delay-1">
             <div className="hero-buttons-group">
-              <a href="#contact" className="btn-orange hover-lift">
+              <a href="#contact" className="btn-orange">
                 Contact Me <FaArrowRight size={12} />
               </a>
-              <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-outline hover-lift">
+              <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-outline">
                 <FaLinkedin size={14} /> LinkedIn
               </a>
             </div>
             <div className="hero-buttons-group">
-              <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-outline hover-lift">
+              <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-outline">
                 <MdOpenInNew size={14} /> ORCID
               </a>
             </div>
           </div>
 
           <div className="hero-stats">
-            <div className="stat-box">
+            <div className="stat-box reveal-on-scroll delay-1">
               <h3>10+</h3>
               <p>YEARS TEACHING</p>
             </div>
-            <div className="stat-box">
+            <div className="stat-box reveal-on-scroll delay-2">
               <h3>Ph.D.</h3>
               <p>IN PROGRESS</p>
             </div>
-            <div className="stat-box">
+            <div className="stat-box reveal-on-scroll delay-3">
               <h3>AI/ML</h3>
               <p>RESEARCH</p>
             </div>
@@ -129,7 +130,7 @@ export default function App() {
                 I am an experienced educator and researcher currently serving as an Assistant Professor at TKR College of Engineering. With a decade of teaching experience in higher education, I focus on bridging the gap between foundational computer science principles and cutting-edge technological advancements. My academic journey is driven by a deep curiosity for how data and algorithms can solve real-world problems.
               </p>
             </div>
-            <div className="about-image-wrapper">
+            <div className="about-image-wrapper reveal-on-scroll delay-1">
               <img 
                 src="https://res.cloudinary.com/dppiuypop/image/upload/v1778302345/uploads/bf6majpkpcgculmz1pyf.jpg" 
                 alt="Mohammad Shakeel" 
@@ -145,7 +146,7 @@ export default function App() {
           <h2 className="research-title">Where intelligent algorithms meet modern infrastructure.</h2>
 
           <div className="research-grid">
-            <div className="research-card hover-lift">
+            <div className="research-card hover-lift reveal-on-scroll delay-1">
               <div className="icon-circle icon-green-bg">
                 <FaGraduationCap size={20} className="icon-dark-green" />
               </div>
@@ -155,7 +156,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="research-card hover-lift">
+            <div className="research-card hover-lift reveal-on-scroll delay-2">
               <div className="icon-circle icon-green-bg">
                 <FaBookOpen size={20} className="icon-dark-green" />
               </div>
@@ -165,7 +166,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="research-card hover-lift">
+            <div className="research-card hover-lift reveal-on-scroll delay-3">
               <div className="icon-circle icon-green-bg">
                 <FaBrain size={20} className="icon-dark-green" />
               </div>
@@ -175,7 +176,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="research-card hover-lift">
+            <div className="research-card hover-lift reveal-on-scroll delay-4">
               <div className="icon-circle icon-green-bg">
                 <FaCar size={20} className="icon-dark-green" />
               </div>
@@ -205,7 +206,7 @@ export default function App() {
 
             <div className="exp-highlights-list">
 
-              <div className="exp-highlight-card">
+              <div className="exp-highlight-card reveal-on-scroll delay-1">
                 <FaAward className="highlight-icon" size={22} />
                 <div className="highlight-text">
                   <strong>Mentorship</strong>
@@ -213,7 +214,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="exp-highlight-card">
+              <div className="exp-highlight-card reveal-on-scroll delay-2">
                 <FaBookOpen className="highlight-icon" size={22} />
                 <div className="highlight-text">
                   <strong>Curriculum</strong>
@@ -221,7 +222,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="exp-highlight-card">
+              <div className="exp-highlight-card reveal-on-scroll delay-3">
                 <FaBrain className="highlight-icon" size={22} />
                 <div className="highlight-text">
                   <strong>Industry-Ready</strong>
@@ -240,7 +241,7 @@ export default function App() {
 
           <div className="skills-card-grid">
 
-            <div className="skill-card-light hover-lift">
+            <div className="skill-card-light hover-lift reveal-on-scroll delay-1">
               <FaCode className="skill-icon-orange" size={24} />
               <h3>Programming Languages</h3>
               <div className="skill-tags-light">
@@ -251,7 +252,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="skill-card-light hover-lift">
+            <div className="skill-card-light hover-lift reveal-on-scroll delay-2">
               <FaGlobe className="skill-icon-orange" size={24} />
               <h3>Web Technologies</h3>
               <div className="skill-tags-light">
@@ -260,7 +261,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="skill-card-light hover-lift">
+            <div className="skill-card-light hover-lift reveal-on-scroll delay-3">
               <FaDatabase className="skill-icon-orange" size={24} />
               <h3>Database & Systems</h3>
               <div className="skill-tags-light">
@@ -275,22 +276,22 @@ export default function App() {
 
         {/* Contact CTA */}
         <section id="contact" className="contact-section-mint reveal-on-scroll">
-          <span className="section-badge">CONTACT & CONNECT</span>
+          <span className="section-badge bg-white">CONTACT & CONNECT</span>
           <h2>Let's collaborate on research or academia.</h2>
           <p className="contact-subtitle">
             Always open to academic collaborations, research discussions, and professional networking.
           </p>
 
           <div className="contact-actions-grid">
-            <a href="mailto:2503c50089@sru.edu.in" className="btn-contact-email hover-lift">
+            <a href="mailto:2503c50089@sru.edu.in" className="btn-contact-email hover-lift reveal-on-scroll delay-1">
               <MdMail size={20} /> 2503c50089@sru.edu.in
             </a>
 
             <div className="contact-socials-row">
-              <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift">
+              <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-2">
                 <FaLinkedin size={18} /> LinkedIn
               </a>
-              <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift">
+              <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-3">
                 <MdOpenInNew size={18} /> ORCID
               </a>
             </div>
@@ -309,4 +310,3 @@ export default function App() {
     </div>
   );
 }
- 
