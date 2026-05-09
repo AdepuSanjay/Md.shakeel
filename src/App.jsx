@@ -75,58 +75,18 @@ export default function App() {
 
         {/* Hero Section */}
         <section className="hero-section reveal-on-scroll">
-          <div className="hero-content-wrapper">
-            
-            {/* Left/Top: Text Content */}
-            <div className="hero-text-content">
-              <div className="hero-badge-pill">
-                <span className="orange-dot"></span>
-                AI RESEARCH SCHOLAR · ASSISTANT PROFESSOR
-              </div>
-
-              <h1 className="hero-title">
-                Mohammad<br />Shakeel
-              </h1>
-
-              <p className="hero-subtitle">
-                Dedicated to advancing computer science education and pioneering research in <strong>Intelligent Transportation Systems.</strong> Currently pursuing a <span className="text-premium-highlight">Ph.D. at SR University</span>, backed by a decade of academic experience and a commitment to shaping the next generation of engineers.
-              </p>
-
-              <div className="hero-actions reveal-on-scroll delay-1">
-                <div className="hero-buttons-group">
-                  <a href="#contact" className="btn-orange">
-                    Contact Me <FaArrowRight size={12} />
-                  </a>
-                  <a href="https://scholar.google.com/citations?user=g1MdrbIAAAAJ&hl=en" target="_blank" rel="noreferrer" className="btn-outline">
-                    <FaBookOpen size={14} /> Publications
-                  </a>
-                  <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-outline">
-                    <FaLinkedin size={14} /> LinkedIn
-                  </a>
-                  <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-outline">
-                    <MdOpenInNew size={14} /> ORCID
-                  </a>
-                </div>
-              </div>
-
-              <div className="hero-stats">
-                <div className="stat-box reveal-on-scroll delay-1">
-                  <h3>10+</h3>
-                  <p>YEARS TEACHING</p>
-                </div>
-                <div className="stat-box reveal-on-scroll delay-2">
-                  <h3>Ph.D.</h3>
-                  <p>IN PROGRESS</p>
-                </div>
-                <div className="stat-box reveal-on-scroll delay-3">
-                  <h3>AI/ML</h3>
-                  <p>RESEARCH</p>
-                </div>
-              </div>
+          <div className="hero-inner">
+            <div className="hero-badge-pill">
+              <span className="orange-dot"></span>
+              AI RESEARCH SCHOLAR · ASSISTANT PROFESSOR
             </div>
 
-            {/* Right/Bottom: Profile Image */}
-            <div className="hero-image-wrapper reveal-on-scroll delay-2">
+            <h1 className="hero-title">
+              Mohammad<br />Shakeel
+            </h1>
+
+            {/* Profile Image - Moved below the name */}
+            <div className="hero-image-wrapper reveal-on-scroll delay-1">
               <img 
                 src="https://res.cloudinary.com/dppiuypop/image/upload/v1778302345/uploads/bf6majpkpcgculmz1pyf.jpg" 
                 alt="Mohammad Shakeel" 
@@ -134,6 +94,41 @@ export default function App() {
               />
             </div>
 
+            <p className="hero-subtitle">
+              Dedicated to advancing computer science education and pioneering research in <strong>Intelligent Transportation Systems.</strong> Currently pursuing a <span className="text-premium-highlight">Ph.D. at SR University</span>, backed by a decade of academic experience and a commitment to shaping the next generation of engineers.
+            </p>
+
+            <div className="hero-actions reveal-on-scroll delay-1">
+              <div className="hero-buttons-group">
+                <a href="#contact" className="btn-orange">
+                  Contact Me <FaArrowRight size={12} />
+                </a>
+                <a href="https://scholar.google.com/citations?user=g1MdrbIAAAAJ&hl=en" target="_blank" rel="noreferrer" className="btn-outline">
+                  <FaBookOpen size={14} /> Publications
+                </a>
+                <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-outline">
+                  <FaLinkedin size={14} /> LinkedIn
+                </a>
+                <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-outline">
+                  <MdOpenInNew size={14} /> ORCID
+                </a>
+              </div>
+            </div>
+
+            <div className="hero-stats">
+              <div className="stat-box reveal-on-scroll delay-1">
+                <h3>10+</h3>
+                <p>YEARS TEACHING</p>
+              </div>
+              <div className="stat-box reveal-on-scroll delay-2">
+                <h3>Ph.D.</h3>
+                <p>IN PROGRESS</p>
+              </div>
+              <div className="stat-box reveal-on-scroll delay-3">
+                <h3>AI/ML</h3>
+                <p>RESEARCH</p>
+              </div>
+            </div>
           </div>
         </section>
 
