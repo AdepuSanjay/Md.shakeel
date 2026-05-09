@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MdMenu, MdClose, MdMail, MdOpenInNew } from 'react-icons/md';
 import { 
   FaLinkedin, FaBookOpen, FaGraduationCap, FaBriefcase, 
-  FaCode, FaBrain, FaCar, FaAward, FaGlobe, FaDatabase, FaArrowRight 
+  FaCode, FaBrain, FaCar, FaAward, FaGlobe, FaDatabase, FaArrowRight, FaGoogle 
 } from 'react-icons/fa';
 import './App.css';
 
@@ -27,7 +27,6 @@ export default function App() {
       });
     }, observerOptions);
 
-    // This will now dynamically pick up both parent sections and their staggered children
     const revealElements = document.querySelectorAll('.reveal-on-scroll');
     revealElements.forEach((el) => observer.observe(el));
 
@@ -41,8 +40,8 @@ export default function App() {
       {/* Navbar - Fixed with Glassmorphism */}
       <nav className="navbar">
         <div className="navbar-inner">
-          <div className="logo">
-            MD.Shakeel
+          <div className="logo logo-text">
+            Mohammad Shakeel Portfolio
           </div>
 
           {/* Desktop Menu */}
@@ -73,49 +72,55 @@ export default function App() {
 
       <main className="main-content">
 
-        {/* Hero Section */}
+        {/* Hero Section (Premium Look) */}
         <section className="hero-section reveal-on-scroll">
-          <div className="hero-badge-pill">
-            <span className="orange-dot"></span>
-            ASSISTANT PROFESSOR · AI RESEARCHER
-          </div>
-
-          <h1 className="hero-title">
-            Mohammad<br />Shakeel
-          </h1>
-
-          <p className="hero-subtitle">
-            Dedicated to advancing computer science education and pioneering research in <strong>Intelligent Transportation Systems.</strong> Backed by a decade of academic experience and a commitment to shaping the next generation of engineers.
-          </p>
-
-          <div className="hero-actions reveal-on-scroll delay-1">
-            <div className="hero-buttons-group">
-              <a href="#contact" className="btn-orange">
-                Contact Me <FaArrowRight size={12} />
-              </a>
-              <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-outline">
-                <FaLinkedin size={14} /> LinkedIn
-              </a>
+          <div className="hero-premium-bg"></div>
+          <div className="hero-content">
+            <div className="hero-badge-pill">
+              <span className="orange-dot"></span>
+              AI RESEARCH SCHOLAR · ASSISTANT PROFESSOR
             </div>
-            <div className="hero-buttons-group">
-              <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-outline">
-                <MdOpenInNew size={14} /> ORCID
-              </a>
-            </div>
-          </div>
 
-          <div className="hero-stats">
-            <div className="stat-box reveal-on-scroll delay-1">
-              <h3>10+</h3>
-              <p>YEARS TEACHING</p>
+            <h1 className="hero-title">
+              Mohammad<br />Shakeel
+            </h1>
+
+            <p className="hero-subtitle">
+              Dedicated to advancing computer science education and pioneering research in <strong>Intelligent Transportation Systems.</strong> Backed by a decade of academic experience and a commitment to shaping the next generation of engineers.
+            </p>
+
+            <div className="hero-actions reveal-on-scroll delay-1">
+              <div className="hero-buttons-group">
+                <a href="#contact" className="btn-orange">
+                  Contact Me <FaArrowRight size={12} />
+                </a>
+                <a href="https://scholar.google.com/citations?user=g1MdrbIAAAAJ&hl=en" target="_blank" rel="noreferrer" className="btn-outline">
+                  <FaGraduationCap size={15} /> Publications
+                </a>
+                <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-outline">
+                  <FaLinkedin size={14} /> LinkedIn
+                </a>
+              </div>
+              <div className="hero-buttons-group mt-mobile-fix">
+                <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-outline">
+                  <MdOpenInNew size={14} /> ORCID
+                </a>
+              </div>
             </div>
-            <div className="stat-box reveal-on-scroll delay-2">
-              <h3>Ph.D.</h3>
-              <p>IN PROGRESS</p>
-            </div>
-            <div className="stat-box reveal-on-scroll delay-3">
-              <h3>AI/ML</h3>
-              <p>RESEARCH</p>
+
+            <div className="hero-stats">
+              <div className="stat-box reveal-on-scroll delay-1">
+                <h3>10+</h3>
+                <p>YEARS TEACHING</p>
+              </div>
+              <div className="stat-box reveal-on-scroll delay-2">
+                <h3>Ph.D.</h3>
+                <p>IN PROGRESS</p>
+              </div>
+              <div className="stat-box reveal-on-scroll delay-3">
+                <h3>AI/ML</h3>
+                <p>RESEARCH</p>
+              </div>
             </div>
           </div>
         </section>
@@ -127,7 +132,10 @@ export default function App() {
               <span className="section-badge">ABOUT ME</span>
               <h2>Bridging foundational CS with cutting-edge AI.</h2>
               <p>
-                I am an experienced educator and researcher currently serving as an Assistant Professor at TKR College of Engineering. With a decade of teaching experience in higher education, I focus on bridging the gap between foundational computer science principles and cutting-edge technological advancements. My academic journey is driven by a deep curiosity for how data and algorithms can solve real-world problems.
+                I am an experienced educator and researcher currently serving as an Assistant Professor at TKR College of Engineering. With a decade of teaching experience in higher education, I focus on bridging the gap between foundational computer science principles and cutting-edge technological advancements.
+              </p>
+              <p className="phd-highlight mt-4">
+                <strong>Currently pursuing my Ph.D. at SR University</strong>, my academic journey is driven by a deep curiosity for how data and intelligent algorithms can solve real-world problems.
               </p>
             </div>
             <div className="about-image-wrapper reveal-on-scroll delay-1">
@@ -288,10 +296,13 @@ export default function App() {
             </a>
 
             <div className="contact-socials-row">
-              <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-2">
+              <a href="https://scholar.google.com/citations?user=g1MdrbIAAAAJ&hl=en" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-2">
+                <FaGraduationCap size={18} /> Publications
+              </a>
+              <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-3">
                 <FaLinkedin size={18} /> LinkedIn
               </a>
-              <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-3">
+              <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-contact-social hover-lift reveal-on-scroll delay-4">
                 <MdOpenInNew size={18} /> ORCID
               </a>
             </div>
@@ -304,7 +315,7 @@ export default function App() {
       <footer className="footer reveal-on-scroll">
         <div className="footer-content">
           <p>© 2026 Mohammad Shakeel. All rights reserved.</p>
-          <p className="footer-role">Assistant Professor · TKR College of Engineering</p>
+          <p className="footer-role">Ph.D. Research Scholar · SR University</p>
         </div>
       </footer>
     </div>
