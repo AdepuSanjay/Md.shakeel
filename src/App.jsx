@@ -16,7 +16,7 @@ export default function App() {
     const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.15, // Triggers slightly later in the viewport
+      threshold: 0.15,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -73,7 +73,7 @@ export default function App() {
       <main className="main-content">
 
         {/* Hero Section */}
-        <section className="hero-section reveal-on-scroll">
+        <section id="hero" className="hero-section reveal-on-scroll">
           <div className="hero-badge-pill">
             <span className="orange-dot"></span>
             ASSISTANT PROFESSOR · AI RESEARCHER
@@ -89,15 +89,15 @@ export default function App() {
 
           <div className="hero-actions">
             <div className="hero-buttons-group">
-              <a href="#contact" className="btn-orange">
+              <a href="#contact" className="btn-orange hover-lift">
                 Contact Me <FaArrowRight size={12} />
               </a>
-              <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-outline">
+              <a href="https://www.linkedin.com/in/mohammad-shakeel-470a6b372" target="_blank" rel="noreferrer" className="btn-outline hover-lift">
                 <FaLinkedin size={14} /> LinkedIn
               </a>
             </div>
             <div className="hero-buttons-group">
-              <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-outline">
+              <a href="https://orcid.org/0009-0004-2330-1284" target="_blank" rel="noreferrer" className="btn-outline hover-lift">
                 <MdOpenInNew size={14} /> ORCID
               </a>
             </div>
@@ -275,7 +275,7 @@ export default function App() {
 
         {/* Contact CTA */}
         <section id="contact" className="contact-section-mint reveal-on-scroll">
-          <span className="section-badge bg-white">CONTACT & CONNECT</span>
+          <span className="section-badge">CONTACT & CONNECT</span>
           <h2>Let's collaborate on research or academia.</h2>
           <p className="contact-subtitle">
             Always open to academic collaborations, research discussions, and professional networking.
